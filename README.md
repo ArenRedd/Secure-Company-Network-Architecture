@@ -8,7 +8,8 @@
 
 ### **Full Network Diagram**
 
-> (Upload your PNG and insert link here)
+> ![Uploading full_topology.png…]()
+
 > 
 
 ---
