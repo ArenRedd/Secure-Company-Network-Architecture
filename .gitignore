@@ -1,0 +1,15 @@
+# Ignore Packet Tracer backup files
+*.pkb
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore final report if generated locally
+/documentation/final_report.pdf
+
+# Ignore asset source files if large
+/assets/diagrams_source_files/
