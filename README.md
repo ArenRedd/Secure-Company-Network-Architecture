@@ -8,7 +8,7 @@
 
 ### **Full Network Diagram**
 
-> ![Uploading full_topology.png…]()
+> <img width="2896" height="7996" alt="full_topology" src="https://github.com/user-attachments/assets/f31f3ff5-618e-44cb-8669-ce20f45d824b" />
 
 > 
 
