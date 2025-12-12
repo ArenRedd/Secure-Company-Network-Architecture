@@ -1,0 +1,9 @@
+! WLC 2504 Configuration
+!
+config wlan create 1 "Corporate-WiFi"
+config wlan security wpa akm 802.1x enable 1
+!
+config wlan create 2 "Guest-WiFi"
+config wlan security wpa akm psk enable 2
+!
+! (and so on)

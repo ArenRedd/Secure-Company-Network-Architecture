@@ -1,0 +1,9 @@
+! Access Switch Admin Configuration
+!
+hostname Access-SW-Admin
+!
+interface range GigabitEthernet0/1-24
+ switchport mode access
+ switchport access vlan 40
+!
+! (and so on)

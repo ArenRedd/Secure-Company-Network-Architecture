@@ -1,0 +1,8 @@
+! ISP1 Router Configuration
+!
+hostname ISP1-Router
+!
+interface GigabitEthernet0/0
+ ip address <Public_IP> <Subnet_Mask>
+!
+! (and so on)

@@ -1,0 +1,13 @@
+! Voice Gateway Configuration
+!
+hostname Voice-Gateway
+!
+dial-peer voice 1 pots
+ destination-pattern 9T
+ port 0/0/0
+!
+dial-peer voice 2 voip
+ destination-pattern 1...
+ session target ipv4:<Call_Manager_IP>
+!
+! (and so on)

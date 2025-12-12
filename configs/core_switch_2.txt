@@ -1,0 +1,19 @@
+! Core Switch 2 Configuration
+!
+hostname Core-SW2
+!
+enable secret <password>
+!
+spanning-tree mode rapid-pvst
+!
+interface Vlan10
+ ip address 192.168.10.253 255.255.255.0
+ standby 10 ip 192.168.10.254
+!
+interface Vlan20
+ ip address 192.168.20.253 255.255.255.0
+ standby 20 ip 192.168.20.254
+ standby 20 priority 110
+ standby 20 preempt
+!
+! (and so on for all VLANs)

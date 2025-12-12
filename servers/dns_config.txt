@@ -1,0 +1,13 @@
+; DNS Server Configuration
+;
+; Zone for example.com
+example.com. IN SOA ns1.example.com. admin.example.com. (
+            2025121201 ; Serial
+            3H         ; Refresh
+            1H         ; Retry
+            1W         ; Expire
+            1H )       ; Minimum TTL
+;
+ns1 IN A <NS1_IP>
+www IN A <WebServer_IP>
+mail IN A <MailServer_IP>

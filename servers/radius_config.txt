@@ -1,0 +1,11 @@
+# RADIUS Server Configuration
+#
+# clients.conf
+client 192.168.80.0/24 {
+    secret = <YourSecretKey>
+    shortname = Wireless
+}
+#
+# users
+"user1" Cleartext-Password := "password123"
+"user2" Cleartext-Password := "password456"

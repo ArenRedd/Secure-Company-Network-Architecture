@@ -1,0 +1,9 @@
+! Access Switch Server Room Configuration
+!
+hostname Access-SW-ServerRoom
+!
+interface range GigabitEthernet0/1-24
+ switchport mode access
+ switchport access vlan 60
+!
+! (and so on)
