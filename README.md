@@ -1,294 +1,269 @@
-Secure Company Network Architecture – Cisco Packet Tracer (Enterprise-Level Project)
+# **Secure Company Network Architecture – Cisco Packet Tracer (Enterprise-Level Project)**
 
-A fully designed & implemented secure enterprise network for a 3-floor corporate building, featuring firewalls, DMZ, WLC, VLANs, HSRP redundancy, VoIP, cloud connectivity, and ISP failover.
+*A fully designed & implemented secure enterprise network for a 3-floor corporate building, featuring firewalls, DMZ, WLC, VLANs, HSRP redundancy, VoIP, cloud connectivity, and ISP failover.*
 
-📸 Network Topology
-Full Network Diagram
+---
 
-(Upload your PNG and insert link here)
+## 📸 **Network Topology**
 
+### **Full Network Diagram**
 
-🏢 Project Overview
+> (Upload your PNG and insert link here)
+> 
 
-This project simulates a real enterprise-class secure network infrastructure for a cloud-technology company with 600+ employees, multiple floors, department segmentation, redundancy, VoIP services, wireless infrastructure, server rooms, and DMZ hosting.
+---
+
+## 🏢 **Project Overview**
+
+This project simulates a **real enterprise-class secure network infrastructure** for a cloud-technology company with **600+ employees**, multiple floors, department segmentation, redundancy, VoIP services, wireless infrastructure, server rooms, and DMZ hosting.
 
 This project demonstrates:
 
-Enterprise LAN design
+- Enterprise LAN design
+- Multi-layer switching
+- Firewall zone segmentation
+- Server deployment
+- Wireless LAN controller infrastructure
+- VoIP telephony setup
+- ISP redundancy & cloud customer access
+- Full security hardening
+- Scalable and future-proof network build
 
-Multi-layer switching
+---
 
-Firewall zone segmentation
-
-Server deployment
-
-Wireless LAN controller infrastructure
-
-VoIP telephony setup
-
-ISP redundancy & cloud customer access
-
-Full security hardening
-
-Scalable and future-proof network build
-
-🎯 Project Goals
+## 🎯 **Project Goals**
 
 ✔ Provide secure connectivity for all departments
+
 ✔ Segment the network using VLANs & firewalls
+
 ✔ Support cloud-based client access
+
 ✔ Enable VoIP communication
+
 ✔ Provide high availability (HSRP + EtherChannel)
+
 ✔ Allow wireless mobility via WLC + LAPs
+
 ✔ Secure critical servers using DMZ + Internal Zones
 
-🧱 Network Components
-1. Service Provider / ISP Layer
+---
 
-ISP1 – Seacom
+## 🧱 **Network Components**
 
-ISP2 – Safaricom
+### **1. Service Provider / ISP Layer**
 
-Each connects to the company through Cisco 2911 routers
+- **ISP1 – Seacom**
+- **ISP2 – Safaricom**
+- Each connects to the company through **Cisco 2911 routers**
+- Provides **dual-homing Internet redundancy**
 
-Provides dual-homing Internet redundancy
+### **2. Edge Security Layer**
 
-2. Edge Security Layer
+- Two **Cisco ASA 5506-X Firewalls**
+- Configured with **three security zones**:
+    - **Outside Zone** (ISP links)
+    - **DMZ Zone** (public servers)
+    - **Inside Zone** (internal LAN)
 
-Two Cisco ASA 5506-X Firewalls
+### **3. Core Switching**
 
-Configured with three security zones:
+- **Two Cisco 3650 Multilayer Switches**
+- Running:
+    - **HSRP** (Gateway redundancy)
+    - **OSPF / Static Routing**
+    - **Layer-3 SVI interfaces**
+    - **EtherChannel (LACP)** between core switches
 
-Outside Zone (ISP links)
+### **4. Access Layer**
 
-DMZ Zone (public servers)
-
-Inside Zone (internal LAN)
-
-3. Core Switching
-
-Two Cisco 3650 Multilayer Switches
-
-Running:
-
-HSRP (Gateway redundancy)
-
-OSPF / Static Routing
-
-Layer-3 SVI interfaces
-
-EtherChannel (LACP) between core switches
-
-4. Access Layer
-
-Cisco 2960 switches across 6 departments:
-
-Sales & Marketing
-
-HR & Logistics
-
-Finance & Accounts
-
-Admin & Public Relations
-
-ICT Department
-
-Server Room
+- Cisco 2960 switches across **6 departments**:
+    - Sales & Marketing
+    - HR & Logistics
+    - Finance & Accounts
+    - Admin & Public Relations
+    - ICT Department
+    - Server Room
 
 Each access switch includes:
 
-VLAN trunk uplinks
+- VLAN trunk uplinks
+- Wireless AP uplinks
+- PC, IP Phone, Printer connections
 
-Wireless AP uplinks
+---
 
-PC, IP Phone, Printer connections
+## 🌐 **VLAN Structure**
 
-🌐 VLAN Structure
-VLAN	Name	Purpose
-10	MANAGEMENT	Switch, WLC, Firewall mgmt
-20	LAN (Wired Users)	PCs & wired hosts
-50	WLAN	Access points + wireless clients
-70	VOICE	IP Phones + Voice Gateway
-90	SERVER-INSIDE	AD, DHCP, DNS, RADIUS
-199	BLACKHOLE	Disabled & unused ports
-📡 Wireless Architecture
+| VLAN | Name | Purpose |
+| --- | --- | --- |
+| 10 | MANAGEMENT | Switch, WLC, Firewall mgmt |
+| 20 | LAN (Wired Users) | PCs & wired hosts |
+| 50 | WLAN | Access points + wireless clients |
+| 70 | VOICE | IP Phones + Voice Gateway |
+| 90 | SERVER-INSIDE | AD, DHCP, DNS, RADIUS |
+| 199 | BLACKHOLE | Disabled & unused ports |
 
-Cisco 2504 Wireless LAN Controller
+---
 
-Lightweight Access Points (LAPs)
+## 📡 **Wireless Architecture**
 
-Centrally managed Wi-Fi SSIDs for VLAN 50
+- **Cisco 2504 Wireless LAN Controller**
+- **Lightweight Access Points (LAPs)**
+- Centrally managed Wi-Fi SSIDs for VLAN 50
+- Mobility + Scalability for future expansion
 
-Mobility + Scalability for future expansion
+---
 
-🖥 Server Infrastructure
-Internal Servers (INSIDE Zone – VLAN 90)
-Server	Function
-Active Directory	User authentication & Group Policy
-DHCP Server	IP distribution for VLAN 10 / 20 / 50
-DNS Server	Internal name resolution
-RADIUS Server	802.1X & device authentication
-DMZ Servers (DMZ Zone)
-Server	Function
-Web Server	Public website
-Email Server	Corporate mail
-FTP Server	Customer data uploads
-App Server	Cloud application services
-File Storage	Publicly accessible storage
-☎️ VoIP System
+## 🖥 **Server Infrastructure**
+| Server | Function |
+| --- | --- |
+| Active Directory | User authentication & Group Policy |
+| DHCP Server | IP distribution for VLAN 10 / 20 / 50 |
+| DNS Server | Internal name resolution |
+| RADIUS Server | 802.1X & device authentication |
 
-Cisco 2811 Voice Gateway
+| Server | Function |
+| --- | --- |
+| Web Server | Public website |
+| Email Server | Corporate mail |
+| FTP Server | Customer data uploads |
+| App Server | Cloud application services |
+| File Storage | Publicly accessible storage |
 
-IP Phones on all departments
+### **Internal Servers (INSIDE Zone – VLAN 90)**
 
-Voice VLAN 70
+### **DMZ Servers (DMZ Zone)**
 
-Numbering format: 4XX per department
+---
 
-DHCP Option 150 for TFTP auto-config
+## ☎️ **VoIP System**
 
-🔥 Security Mechanisms
-Firewall Zone Policies
+- **Cisco 2811 Voice Gateway**
+- IP Phones on all departments
+- Voice VLAN 70
+- Numbering format: `4XX` per department
+- DHCP Option 150 for TFTP auto-config
 
-Strict ACLs between:
+---
 
-Inside ↔ DMZ
+## 🔥 **Security Mechanisms**
 
-Inside ↔ Outside
+### **Firewall Zone Policies**
 
-DMZ ↔ Outside
+- Strict ACLs between:
+    - Inside ↔ DMZ
+    - Inside ↔ Outside
+    - DMZ ↔ Outside
+- Public services exposed only via DMZ
+- Internal services **never accessible from outside**
 
-Public services exposed only via DMZ
+### **Switch Security**
 
-Internal services never accessible from outside
+- BPDU Guard
+- PortFast
+- Blackhole VLAN for all unused ports
+- SSH access restricted to **Management VLAN only**
 
-Switch Security
+### **Routing Security**
 
-BPDU Guard
+- HSRP failover
+- OSPF internal segmentation
+- Static routes for DMZ + ASA
 
-PortFast
+---
 
-Blackhole VLAN for all unused ports
+## 🚀 **High Availability (Redundancy)**
 
-SSH access restricted to Management VLAN only
-
-Routing Security
-
-HSRP failover
-
-OSPF internal segmentation
-
-Static routes for DMZ + ASA
-
-🚀 High Availability (Redundancy)
-✔ Dual ISP Redundancy
+### ✔ Dual ISP Redundancy
 
 Automatic switching if ISP1 fails.
 
-✔ HSRP on Core Switches
+### ✔ HSRP on Core Switches
 
 Core-1 = active for VLAN 10 & 20
+
 Core-2 = active for VLAN 50 & 90
+
 Each becomes standby for the other → load balanced gateway.
 
-✔ EtherChannel
+### ✔ EtherChannel
 
 Three physical links bundled for:
 
-Faster throughput
+- Faster throughput
+- Stability
+- Instant link failover
 
-Stability
+---
 
-Instant link failover
-
-🌍 Cloud Connectivity
+## 🌍 **Cloud Connectivity**
 
 A simulated cloud router connects:
 
-External USA client
-
-External China client
+- External USA client
+- External China client
 
 These clients can securely access DMZ public services.
 
-🛠 Configuration Guide Summary
+---
+
+## 🛠 **Configuration Guide Summary**
 
 The project includes the following configurations:
 
-Switching
+### **Switching**
 
-VLAN creation + SVI interfaces
+- VLAN creation + SVI interfaces
+- Trunking
+- EtherChannel (LACP)
+- BPDU Guard, PortFast
+- DHCP relay using IP helper-address
 
-Trunking
+### **Routing**
 
-EtherChannel (LACP)
+- Inter-VLAN routing
+- HSRP VIPs
+- Static routes
+- OSPF for internal distribution
 
-BPDU Guard, PortFast
+### **Firewall**
 
-DHCP relay using IP helper-address
+- Inside, Outside, DMZ interfaces
+- NAT rules
+- ACLs
+- Static routes
+- Security levels
 
-Routing
+### **DHCP**
 
-Inter-VLAN routing
+- Pools for Management, LAN, WiFi, Voice
+- Excluded addresses
+- Option 150 for IP Phones
 
-HSRP VIPs
+### **VoIP**
 
-Static routes
+- Dial-peers
+- Telephony service
+- Phone registration
+- Voice VLAN assignments
 
-OSPF for internal distribution
+---
 
-Firewall
+## 📝 **Conclusion**
 
-Inside, Outside, DMZ interfaces
+This project demonstrates a **fully functional, enterprise-level secure network** with:
 
-NAT rules
-
-ACLs
-
-Static routes
-
-Security levels
-
-DHCP
-
-Pools for Management, LAN, WiFi, Voice
-
-Excluded addresses
-
-Option 150 for IP Phones
-
-VoIP
-
-Dial-peers
-
-Telephony service
-
-Phone registration
-
-Voice VLAN assignments
-
-📝 Conclusion
-
-This project demonstrates a fully functional, enterprise-level secure network with:
-
-Redundancy
-
-Security zones
-
-Wireless infrastructure
-
-VoIP telephony
-
-Cloud access
-
-Modern industry-standard architecture
+- Redundancy
+- Security zones
+- Wireless infrastructure
+- VoIP telephony
+- Cloud access
+- Modern industry-standard architecture
 
 It is suitable for:
 
-College final projects
-
-Portfolio showcase
-
-Job interview demonstration
-
-Enterprise network practice
+- College final projects
+- Portfolio showcase
+- Job interview demonstration
+- Enterprise network practice
