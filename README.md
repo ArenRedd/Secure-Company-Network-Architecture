@@ -21,7 +21,7 @@
               │                                           │
        ┌───────────────┐                         ┌───────────────┐
        │     ISP 1     │                         │     ISP 2     │
-       │   (Seacom)    │                         │ (Safaricom)  │
+       │   (Seacom)    │                         │ (Safaricom)   │
        └───────┬───────┘                         └───────┬───────┘
                │                                         │
          ┌─────▼────────┐                       ┌────────▼───────┐
@@ -41,30 +41,30 @@
                     └──────────┬──────────┘
                                │
               ┌────────────────┴────────────────┐
-              │            CORE LAYER            │
-              │     HSRP + EtherChannel          │
+              │            CORE LAYER           │
+              │     HSRP + EtherChannel         │
               └───────────────┬─────────────────┘
                   ┌───────────┴───────────┐
                   │                       │
          ┌────────▼────────┐     ┌────────▼────────┐
          │ Core Switch 1   │     │ Core Switch 2   │
-         │ Cisco 3650     │     │ Cisco 3650     │
-         │ HSRP Active    │     │ HSRP Standby   │
+         │ Cisco 3650      │     │ Cisco 3650      │
+         │ HSRP Active     │     │ HSRP Standby    │
          └────────┬────────┘     └────────┬────────┘
-                  │                         │
+                  │                       │
       ────────────┴─────────── EtherChannel ─────────────
-                  │                         │
+                  │                       │
          ┌────────▼────────┐     ┌────────▼────────┐
          │ Access Switches │     │ Access Switches │
-         │ Cisco 2960     │     │ Cisco 2960     │
+         │ Cisco 2960      │     │ Cisco 2960      │
          └────────┬────────┘     └────────┬────────┘
-                  │                         │
- ┌────────────────┼────────────────┬────────┼─────────────────┐
- │                │                │        │                 │
-▼                ▼                ▼        ▼                 ▼
-VLAN 20           VLAN 70          VLAN 50   VLAN 90            VLAN 10
-LAN Users         VoIP Phones      WiFi APs  Internal Servers   Management
-PCs / Printers   IP Phones         WLC       AD / DNS / DHCP    SSH / SNMP
+                  │                       │
+ ┌────────────────┼──────────────┬────────┼─────────────────┐
+ │                │              │        │                 │
+▼                 ▼              ▼        ▼                 ▼
+VLAN 20           VLAN 70        VLAN 50   VLAN 90            VLAN 10
+LAN Users         VoIP Phones    WiFi APs  Internal Servers   Management
+PCs / Printers    IP Phones       WLC      AD / DNS / DHCP    SSH / SNMP
 ```
 
 ---
@@ -106,8 +106,8 @@ PCs / Printers   IP Phones         WLC       AD / DNS / DHCP    SSH / SNMP
 ## **VoIP Architecture**
 
 ```
-        ┌─────────────────────────┐
-        │ Cisco 2811 Voice GW     │
+        ┌────────────────────────┐
+        │ Cisco 2811 Voice GW    │
         │ CME + TFTP             │
         └──────────┬─────────────┘
                    │ VLAN 70
