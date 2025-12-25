@@ -8,6 +8,116 @@
 
 ### **Full Network Diagram**
 
+## **Logical Architecture (Text Diagram – Easy to Rebuild Anywhere)**
+
+```
+                        ┌─────────────────────────┐
+                        │        CLOUD / INTERNET │
+                        │  External Clients (USA) │
+                        │  External Clients (CN)  │
+                        └───────────┬─────────────┘
+                                    │
+              ┌─────────────────────┴─────────────────────┐
+              │                                           │
+       ┌───────────────┐                         ┌───────────────┐
+       │     ISP 1     │                         │     ISP 2     │
+       │   (Seacom)    │                         │ (Safaricom)  │
+       └───────┬───────┘                         └───────┬───────┘
+               │                                         │
+         ┌─────▼────────┐                       ┌────────▼───────┐
+         │ Cisco 2911   │                       │  Cisco 2911    │
+         │ Edge Router  │                       │  Edge Router   │
+         └─────┬────────┘                       └────────┬───────┘
+               └───────────────┬─────────────────────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │  ASA Firewall – 1   │
+                    │ Outside / DMZ / LAN │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │  ASA Firewall – 2   │
+                    │ Redundant Pair      │
+                    └──────────┬──────────┘
+                               │
+              ┌────────────────┴────────────────┐
+              │            CORE LAYER            │
+              │     HSRP + EtherChannel          │
+              └───────────────┬─────────────────┘
+                  ┌───────────┴───────────┐
+                  │                       │
+         ┌────────▼────────┐     ┌────────▼────────┐
+         │ Core Switch 1   │     │ Core Switch 2   │
+         │ Cisco 3650     │     │ Cisco 3650     │
+         │ HSRP Active    │     │ HSRP Standby   │
+         └────────┬────────┘     └────────┬────────┘
+                  │                         │
+      ────────────┴─────────── EtherChannel ─────────────
+                  │                         │
+         ┌────────▼────────┐     ┌────────▼────────┐
+         │ Access Switches │     │ Access Switches │
+         │ Cisco 2960     │     │ Cisco 2960     │
+         └────────┬────────┘     └────────┬────────┘
+                  │                         │
+ ┌────────────────┼────────────────┬────────┼─────────────────┐
+ │                │                │        │                 │
+▼                ▼                ▼        ▼                 ▼
+VLAN 20           VLAN 70          VLAN 50   VLAN 90            VLAN 10
+LAN Users         VoIP Phones      WiFi APs  Internal Servers   Management
+PCs / Printers   IP Phones         WLC       AD / DNS / DHCP    SSH / SNMP
+```
+
+---
+
+## **DMZ ARCHITECTURE**
+
+```
+                   INTERNET
+                      │
+               ┌──────▼──────┐
+               │  ASA FW     │
+               │  DMZ Zone   │
+               └──────┬──────┘
+                      │
+        ┌─────────────┼──────────────────┐
+        │             │                  │
+   Web Server     Mail Server        FTP Server
+   Public Site    Email Services     File Uploads
+```
+
+---
+
+## **Wireless Architecture**
+
+```
+          ┌───────────────────────────┐
+          │  Cisco 2504 WLC           │
+          │  VLAN 50 (WLAN)           │
+          └─────────────┬─────────────┘
+                        │
+              ┌─────────┴─────────┐
+              │                   │
+         Lightweight AP        Lightweight AP
+          Floor 1               Floor 2 / 3
+```
+
+---
+
+## **VoIP Architecture**
+
+```
+        ┌─────────────────────────┐
+        │ Cisco 2811 Voice GW     │
+        │ CME + TFTP             │
+        └──────────┬─────────────┘
+                   │ VLAN 70
+      ┌────────────┼──────────────┐
+      │            │              │
+   IP Phone      IP Phone       IP Phone
+   Dept A        Dept B         Dept C
+```
+
+---
 
 
 ---
