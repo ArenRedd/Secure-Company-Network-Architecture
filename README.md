@@ -4,17 +4,15 @@
 
 ---
 
-## 📸 **Network Topology**
+## **Network Topology**
 
 ### **Full Network Diagram**
 
-> <img width="2896" height="7996" alt="full_topology" src="https://github.com/user-attachments/assets/f31f3ff5-618e-44cb-8669-ce20f45d824b" />
 
-> 
 
 ---
 
-## 🏢 **Project Overview**
+## **Project Overview**
 
 This project simulates a **real enterprise-class secure network infrastructure** for a cloud-technology company with **600+ employees**, multiple floors, department segmentation, redundancy, VoIP services, wireless infrastructure, server rooms, and DMZ hosting.
 
@@ -32,7 +30,7 @@ This project demonstrates:
 
 ---
 
-## 🎯 **Project Goals**
+## **Project Goals**
 
 ✔ Provide secure connectivity for all departments
 
@@ -50,7 +48,7 @@ This project demonstrates:
 
 ---
 
-## 🧱 **Network Components**
+## **Network Components**
 
 ### **1. Service Provider / ISP Layer**
 
@@ -94,7 +92,7 @@ Each access switch includes:
 
 ---
 
-## 🌐 **VLAN Structure**
+## **VLAN Structure**
 
 | VLAN | Name | Purpose |
 | --- | --- | --- |
@@ -107,7 +105,7 @@ Each access switch includes:
 
 ---
 
-## 📡 **Wireless Architecture**
+## **Wireless Architecture**
 
 - **Cisco 2504 Wireless LAN Controller**
 - **Lightweight Access Points (LAPs)**
@@ -116,7 +114,7 @@ Each access switch includes:
 
 ---
 
-## 🖥 **Server Infrastructure**
+## **Server Infrastructure**
 | Server | Function |
 | --- | --- |
 | Active Directory | User authentication & Group Policy |
@@ -138,7 +136,7 @@ Each access switch includes:
 
 ---
 
-## ☎️ **VoIP System**
+## **VoIP System**
 
 - **Cisco 2811 Voice Gateway**
 - IP Phones on all departments
@@ -148,7 +146,7 @@ Each access switch includes:
 
 ---
 
-## 🔥 **Security Mechanisms**
+## **Security Mechanisms**
 
 ### **Firewall Zone Policies**
 
@@ -174,7 +172,7 @@ Each access switch includes:
 
 ---
 
-## 🚀 **High Availability (Redundancy)**
+## **High Availability (Redundancy)**
 
 ### ✔ Dual ISP Redundancy
 
@@ -198,7 +196,7 @@ Three physical links bundled for:
 
 ---
 
-## 🌍 **Cloud Connectivity**
+## **Cloud Connectivity**
 
 A simulated cloud router connects:
 
@@ -251,7 +249,7 @@ The project includes the following configurations:
 
 ---
 
-## 📝 **Conclusion**
+## **Conclusion**
 
 This project demonstrates a **fully functional, enterprise-level secure network** with:
 
@@ -261,10 +259,3 @@ This project demonstrates a **fully functional, enterprise-level secure network*
 - VoIP telephony
 - Cloud access
 - Modern industry-standard architecture
-
-It is suitable for:
-
-- College final projects
-- Portfolio showcase
-- Job interview demonstration
-- Enterprise network practice
