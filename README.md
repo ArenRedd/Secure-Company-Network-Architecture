@@ -6,7 +6,7 @@
 ## Anatomy of an Enterprise Network
 
 > High-level logical view showing how ISP connectivity, security zones, core switching, access layers, and enterprise services interact in a production-grade network.
-<img width="2752" height="1536" alt="unnamed(2)" src="https://github.com/user-attachments/assets/40813e12-7fdc-4259-949b-5b69b48e30c8" />
+<img width="1596" height="1536" alt="unnamed(4" src="https://github.com/user-attachments/assets/c9d20a0a-8e30-4e40-aa5a-7875e390747c" />
 
 
 ## **Network Topology**
@@ -17,7 +17,7 @@
 
 ```
                         ┌─────────────────────────┐
-                        │        CLOUD / INTERNET │
+                        │    CLOUD / INTERNET     │
                         │  External Clients (USA) │
                         │  External Clients (CN)  │
                         └───────────┬─────────────┘
@@ -47,7 +47,7 @@
                                │
               ┌────────────────┴────────────────┐
               │            CORE LAYER           │
-              │     HSRP + EtherChannel         │
+              │        HSRP + EtherChannel      │
               └───────────────┬─────────────────┘
                   ┌───────────┴───────────┐
                   │                       │
@@ -57,7 +57,7 @@
          │ HSRP Active     │     │ HSRP Standby    │
          └────────┬────────┘     └────────┬────────┘
                   │                       │
-      ────────────┴─────────── EtherChannel ─────────────
+         ─────────┴──────EtherChannel ─────────────
                   │                       │
          ┌────────▼────────┐     ┌────────▼────────┐
          │ Access Switches │     │ Access Switches │
