@@ -3,6 +3,11 @@
 *A fully designed & implemented secure enterprise network for a 3-floor corporate building, featuring firewalls, DMZ, WLC, VLANs, HSRP redundancy, VoIP, cloud connectivity, and ISP failover.*
 
 ---
+## Anatomy of an Enterprise Network
+
+> High-level logical view showing how ISP connectivity, security zones, core switching, access layers, and enterprise services interact in a production-grade network.
+<img width="2752" height="1536" alt="unnamed(2)" src="https://github.com/user-attachments/assets/40813e12-7fdc-4259-949b-5b69b48e30c8" />
+
 
 ## **Network Topology**
 
