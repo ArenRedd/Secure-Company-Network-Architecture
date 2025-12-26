@@ -15,7 +15,7 @@
 
 ### **Full Network Diagram**
 
-## **Logical Architecture (Text Diagram – Easy to Rebuild Anywhere)**
+## **Logical Architecture**
 
 ```
                         ┌─────────────────────────┐
