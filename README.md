@@ -11,6 +11,8 @@
 
 ## **Network Topology**
 
+<img width="2677" height="1903" alt="secure-company-network-architecture" src="https://github.com/user-attachments/assets/c03c774f-6bd1-407b-ac49-a99e764085f3" />
+
 ### **Full Network Diagram**
 
 ## **Logical Architecture (Text Diagram – Easy to Rebuild Anywhere)**
